@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class Anagram 
+{
+	public static void main(String[] args) 
+	{
+		int temp=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the string");
+		String str1=sc.nextLine();
+		System.out.println("enter the string2");
+		String str2=sc.nextLine();
+		int length1=str1.length();
+		int length2=str2.length();
+		if(length1==length2)
+		{
+			int l=length1;
+			for(int i=0;i<l;i++)
+			{
+				int count=0;
+				for(int j=0;j<l;j++)
+				{
+					if(str1.charAt(i)==str2.charAt(j))
+					{
+						count=1;
+						break;
+					}
+				}
+				if(count==0)
+				{
+					 temp=1;
+					break;
+				}
+			}
+			if(temp==1)
+			{
+				System.out.println("String are not anagrams");
+			}
+			else
+			{
+				System.out.println("string are anagrams");
+			}
+	}
+	}
+}
