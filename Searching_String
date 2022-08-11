@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Searching_String1 
+{
+	public static void main(String[] args) 
+	{
+		int ch,i;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the number of string:");
+		int size=sc.nextInt();
+		Scanner sc2=new Scanner(System.in);
+		System.out.println("Enter String elements:");
+		String str[]=new String[size];
+		for(i=0;i<size;i++)
+		str[i]=sc2.charAt(i);
+		System.out.println("Enter a element to be searched");
+		ch=sc2.charAt(i);
+		for(i=0;i<size;i++)
+		{
+			if(str[i]==ch)
+			{
+		      System.out.println(ch+" element found at "+i);
+			  break;
+			}
+		     
+		}
+           if(i==size)
+			System.out.println(ch+" Not found");
+	}
+}
